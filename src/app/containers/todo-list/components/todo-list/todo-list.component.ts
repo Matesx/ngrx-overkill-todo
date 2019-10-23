@@ -27,4 +27,8 @@ export class TodoListComponent implements OnInit {
     this.store.dispatch(new fromAction.LoadGetTodos());
   }
 
+  onToggle(todo: Todo) {
+    this.store.dispatch(new fromAction.ToggleTodo(todo));
+  }
+
 }

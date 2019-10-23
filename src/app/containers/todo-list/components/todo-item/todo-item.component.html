@@ -1,7 +1,7 @@
 <mat-card>
   <div [class.completed]="todo.completed">
     <div class="view">
-      <mat-checkbox [checked]="todo.completed"></mat-checkbox>
+      <mat-checkbox [checked]="todo.completed" (click)="toggle.emit(todo)"></mat-checkbox>
         {{ todo.title }}
     </div>
 

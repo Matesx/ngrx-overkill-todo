@@ -34,7 +34,7 @@ export function todosReducer(
         state: StateEnum.LOADED,
       };
 
-      // GET
+    // GET
     case ActionTypes.LOAD_GET_TODOS:
       return {
         ...state,
@@ -44,6 +44,23 @@ export function todosReducer(
     case ActionTypes.SUCCESS_GET_TODOS:
       return {
         ...state,
+        state: StateEnum.LOADED,
+      };
+
+    // TOGGLE
+    case ActionTypes.TOGGLE_TODO:
+      return {
+        ...state,
+        data: state.data.map(todo => {
+          if (action.todo.id === todo.id) {
+            return {
+              ...todo,
+              completed: !todo.completed,
+            };
+          } else {
+            return todo;
+          }
+        }),
         state: StateEnum.LOADED,
       };
 

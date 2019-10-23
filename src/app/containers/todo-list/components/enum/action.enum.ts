@@ -5,6 +5,8 @@ export enum ActionTypes {
   // GET Todos
   LOAD_GET_TODOS = '[todoList] Load Get Todos',
   SUCCESS_GET_TODOS = '[todoList] Success Get Todos',
+  // Toggle Todo
+  TOGGLE_TODO = '[todoList] Toggle Todo',
   // ERROR
   ERROR_LOAD_ACTION = '[todoList] Error Load Action'
 }

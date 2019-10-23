@@ -22,6 +22,13 @@ export class SuccessGetTodos implements Action {
   constructor(public todo: Todo[]) {}
 }
 
+// TOGGLE TODO
+export class ToggleTodo implements Action {
+  readonly type = ActionTypes.TOGGLE_TODO;
+
+  constructor(public todo: Todo) { }
+}
+
 // ERROR ACTIONS
 export class ErrorLoadAction {
   readonly type = ActionTypes.ERROR_LOAD_ACTION;
@@ -32,6 +39,7 @@ export type Actions = LoadInitTodos
   | SuccessInitTodos
   | LoadGetTodos
   | SuccessGetTodos
-  | ErrorLoadAction;
+  | ErrorLoadAction
+  | ToggleTodo;
 
 
