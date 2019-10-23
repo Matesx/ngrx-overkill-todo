@@ -15,12 +15,14 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { TodoItemComponent } from './containers/todo-list/components/todo-item/todo-item.component';
+import { TodoDetailComponent } from './containers/todo-list/components/todo-detail/todo-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    TodoDetailComponent
   ],
   imports: [
     MaterialModule,

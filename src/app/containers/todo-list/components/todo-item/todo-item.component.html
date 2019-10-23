@@ -2,7 +2,10 @@
   <div [class.completed]="todo.completed">
     <div class="view">
       <mat-checkbox [checked]="todo.completed" (click)="toggle.emit(todo)"></mat-checkbox>
+
+      <a [title]="todo.title + ' details'" [routerLink]="['/todos', todo.id]">
         {{ todo.title }}
+      </a>
     </div>
 
   </div>

@@ -1,0 +1,20 @@
+<h1> Detail : {{todo.title}} </h1>
+
+<mat-card class="detail">
+  <table>
+    <td>Id :</td>
+    <td>{{ todo.id }}</td>
+    <tr></tr>
+    <td>Title :</td>
+    <td>{{ todo.title }}</td>
+    <tr></tr>
+    <td>Description :</td>
+    <td>{{ todo.description }}</td>
+    <tr></tr>
+    <td>Completed :</td>
+    <td>{{ todo.completed }}</td>
+  </table>
+</mat-card>
+
+
+<button mat-flat-button color="primary" (click)="goBack()">go back</button>
