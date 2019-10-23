@@ -1,11 +1,15 @@
 <mat-card>
   <div [class.completed]="todo.completed">
-    <div class="view">
+    <div>
       <mat-checkbox [checked]="todo.completed" (click)="toggle.emit(todo)"></mat-checkbox>
 
       <a [title]="todo.title + ' details'" [routerLink]="['/todos', todo.id]">
         {{ todo.title }}
       </a>
+
+      <button mat-flat-button color="primary" (click)="delete.emit(todo.id)">
+        Delete
+      </button>
     </div>
 
   </div>

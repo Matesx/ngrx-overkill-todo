@@ -64,6 +64,36 @@ export function todosReducer(
         state: StateEnum.LOADED,
       };
 
+    // CREATE
+    case ActionTypes.CREATE_TODO:
+      return {
+        ...state,
+        data: [
+          {
+            id: state.data.length + 1,
+            title: action.todo.title,
+            description: action.todo.description,
+            completed: action.todo.completed,
+          },
+          ...state.data,
+        ],
+        state: StateEnum.LOADED,
+      };
+
+    // DELETE
+    case ActionTypes.LOAD_DELETE_TODO:
+      return {
+        ...state,
+        state: StateEnum.LOADING,
+      };
+
+    case ActionTypes.SUCCESS_DELETE_TODO:
+      return {
+        ...state,
+        data: state.data.filter(todo => action.todoId !== todo.id),
+        state: StateEnum.LOADED,
+      };
+
     default:
       return state;
   }

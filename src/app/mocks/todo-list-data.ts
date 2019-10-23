@@ -7,7 +7,7 @@ export const todosMock = [{
 {
   id: 2,
   title: 'Eat',
-  description: 'Otherwise I can\'t develop anymore :(',
+  description: 'Otherwise I can\'t develop anymore ;p',
   completed: false
 },
 {

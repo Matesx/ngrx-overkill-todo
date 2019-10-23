@@ -25,6 +25,14 @@ export class TodoListEffect {
       catchError((err) => of(new fromAction.ErrorLoadAction(err)))
     );
 
+  @Effect() LoadDeleteTodo$: Observable<fromAction.Actions> = this.actions$
+    .pipe(
+      ofType<fromAction.LoadDeleteTodo>(ActionTypes.LOAD_DELETE_TODO),
+      switchMap(action => this.todoListService.deleteTodo(action.todoId)),
+      map(id => new fromAction.SuccessDeleteTodo(id)),
+      catchError((err) => of(new fromAction.ErrorLoadAction(err)))
+    );
+
   constructor(
     private todoListService: TodoListService,
     private actions$: Actions

@@ -1,6 +1,33 @@
-<h1>Welcome to the amazing {{title}}!</h1>
+
+<h1>Welcome to the amazing {{title}} !</h1>
+
+<form [formGroup]="todoForm">
+  <div>
+    <mat-form-field>
+      <input matInput type="text" formControlName="title" placeholder="Title" />
+    </mat-form-field>
+    <mat-error *ngIf="!todoForm.get('title').valid && todoForm.get('title').touched">
+      This field is required
+    </mat-error>
+  </div>
+  <div>
+    <input matInput type="text" formControlName="description" placeholder="Description" />
+  </div>
+  <div>
+    <button mat-flat-button color="primary" [disabled]="!todoForm.valid" (click)="onSubmit(todoForm.value)" class="button" type="submit">Add</button>
+  </div>
+</form>
+
 
 <app-todo-item *ngFor="let todo of (todos$ | async)"
-  [todo]="todo"
-  (toggle)="onToggle(todo)">
+[todo]="todo"
+(toggle)="onToggle(todo)"
+(delete)="onDelete(todo.id)">
 </app-todo-item>
+
+
+<div class="footer">
+  <mat-card>Rely on NgRx - Please read "README.md"</mat-card>
+</div>
+
+

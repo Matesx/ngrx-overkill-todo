@@ -1,4 +1,21 @@
-# NgrxOverkillTodo
+# Information :
+
+Welcome to this wonderful project :)
+
+It is rely on NgRx !
+
+Info for the product owner :
+
+"When a todo is done, it is placed at the bottom of the list, and displayed "crossed out"."
+Instead of displaying "crossed out" I putted a css class, it is more beautiful ;)
+
+Unfortunately, due to the lack of time, I didn't have time to develop test but check this useful link about testing app with NgRx: https://ngrx.io/guide/store/testing
+
+Do not hesitate to check my code ;)
+
+Github pages : https://matesx.github.io/ngrx-overkill-todo/
+
+# Ngrx Overkill Todo App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
 
