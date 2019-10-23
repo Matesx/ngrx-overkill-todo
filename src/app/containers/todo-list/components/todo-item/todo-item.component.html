@@ -1,0 +1,9 @@
+<mat-card>
+  <div [class.completed]="todo.completed">
+    <div class="view">
+      <mat-checkbox [checked]="todo.completed"></mat-checkbox>
+        {{ todo.title }}
+    </div>
+
+  </div>
+</mat-card>
